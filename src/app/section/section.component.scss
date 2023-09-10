@@ -1,0 +1,14 @@
+.section {
+  height: 100dvh;
+  max-height: 100dvh;
+  scroll-snap-align: start;
+  display: flex;
+
+  img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+}

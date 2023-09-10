@@ -1,17 +1,40 @@
 @font-face {
   font-family: "GothamSSm";
-  src: url(./assets/fonts/GothamSSm-Book_Web.woff2);
+  src: url(./assets/fonts/GothamSSm-Book_Web.woff2) format("truetype");
   font-weight: normal;
+  font-style: normal;
 }
 @font-face {
   font-family: "GothamSSm";
-  src: url(./assets/fonts/GothamSSm-Medium_Web.woff2);
+  src: url(./assets/fonts/GothamSSm-Medium_Web.woff2) format("truetype");
   font-weight: bold;
+  font-style: normal;
+}
+
+html {
+  scroll-snap-type: y mandatory;
 }
 body {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+small,
+strong,
+span {
+  margin: 0;
+  padding: 0;
 }
 
 * {
+  position: relative;
   font-family: "GothamSSm", Arial, Helvetica, sans-serif;
   box-sizing: border-box;
 }
