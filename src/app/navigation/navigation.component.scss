@@ -7,26 +7,29 @@ header {
   top: 0;
   height: 56px;
   padding-inline: 2rem;
+
   .title {
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
     color: black;
-    position: relative;
-    height: 24px;
-    width: 120px;
+    padding-inline: 0.6rem;
+    svg {
+      height: 24px;
+      width: 120px;
+    }
   }
   nav {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.8rem;
   }
 
   .end {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.8rem;
     button {
       width: 24px;
       height: 24px;
@@ -35,10 +38,15 @@ header {
 }
 
 button {
-  border: none;
-  background-color: transparent;
   padding: 0;
   margin: 0;
+  border: none;
+  background-color: transparent;
+}
+.navButton {
   font-weight: bold;
   color: #171a20;
+  padding: 0.5rem;
+  font-size: 14px;
+  font-weight: bold;
 }
