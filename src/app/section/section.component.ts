@@ -11,7 +11,7 @@ export class SectionComponent implements OnInit {
   @Input() title: string = '';
   @Input() footer?: boolean;
   @Input() text?: string;
-
+  @Input() first?: boolean;
   visibility: number = 0;
   constructor(private element: ElementRef) {}
 

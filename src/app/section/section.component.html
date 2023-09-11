@@ -1,14 +1,23 @@
 <section class="section">
   <img class="img desktop" src="{{ desktop }}" alt="{{ title }}" />
   <img class="img mobile" src="{{ mobile }}" alt="{{ title }}" />
-  <div class="overlay" [ngStyle]="{'opacity': visibility,}">
+  <div
+    class="overlay"
+    [ngStyle]="{
+      opacity: visibility,
+      display: visibility === 0 ? 'none' : 'flex'
+    }"
+  >
     <div class="top">
       <h2>{{ title }}</h2>
+      <p *ngIf="footer">Power Everything</p>
     </div>
     <div class="bottom">
       <button class="button">Learn More</button>
       <p>{{ text }}</p>
 
+      <span *ngIf="first" class="material-icons" id="down">chevron_right</span>
+      <!-- Filled -->
       <footer *ngIf="footer">
         <p>Tesla © 2023</p>
         <a href="#"> Privacy & Legal </a>
