@@ -15,25 +15,20 @@ export class SectionComponent implements OnInit {
   constructor(private element: ElementRef) {}
 
   ngOnInit() {
+    this.checkVisibility();
     addEventListener('scroll', (e) => {
       this.checkVisibility();
-      console.log(this.visibility);
     });
   }
 
   checkVisibility() {
-    const rect = this.element.nativeElement.getBoundingClientRect();
+    const { top, bottom, height } =
+      this.element.nativeElement.getBoundingClientRect();
 
     const windowHeight =
       window.innerHeight || document.documentElement.clientHeight;
-
-    let a = Math.floor(
-      100 - ((rect.top >= 0 ? 0 : rect.top) / +-rect.height) * 100
-    );
-    let b = Math.floor(
-      100 - ((rect.bottom - windowHeight) / rect.height) * 100
-    );
-
+    let a = Math.floor(100 - ((top >= 0 ? 0 : top) / +-height) * 100);
+    let b = Math.floor(100 - ((bottom - windowHeight) / height) * 100);
     let percentage = a < 100 && a >= 0 ? a : b < 100 && b >= 0 ? b : 0;
     if (a === 100 && b === 100) percentage = 100;
     this.visibility = percentage / 100;

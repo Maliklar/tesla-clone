@@ -1,9 +1,11 @@
 <section class="section">
   <img class="img" src="{{ src }}" alt="{{ src }}" />
-  <div class="overlay">
-    <div class="top" [ngStyle]="{'opacity': visibility,}">
+  <div class="overlay" [ngStyle]="{'opacity': visibility,}">
+    <div class="top">
       <h2>{{ title }}</h2>
     </div>
-    <div class="bottom"></div>
+    <div class="bottom">
+      <button class="button">Learn More</button>
+    </div>
   </div>
 </section>
