@@ -6,7 +6,8 @@ import { Component, ElementRef, Input, OnInit } from '@angular/core';
   styleUrls: ['./section.component.scss'],
 })
 export class SectionComponent implements OnInit {
-  @Input() src: string = '';
+  @Input() desktop: string = '';
+  @Input() mobile: string = '';
   @Input() title: string = '';
   @Input() footer?: boolean;
   @Input() text?: string;

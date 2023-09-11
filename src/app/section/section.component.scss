@@ -40,6 +40,13 @@
       }
     }
   }
+
+  .desktop {
+    display: block;
+  }
+  .mobile {
+    display: none;
+  }
   .img {
     position: absolute;
     top: 0;
@@ -47,5 +54,14 @@
     height: 100%;
     object-fit: cover;
     z-index: -1;
+  }
+
+  @media screen and (max-width: 500px) {
+    .desktop {
+      display: none;
+    }
+    .mobile {
+      display: block;
+    }
   }
 }
