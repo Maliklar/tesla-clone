@@ -3,10 +3,29 @@
 <app-navigation />
 
 <div class="content" role="main">
-  <app-section [src]="'../assets/images/model3/desktop.avif'"></app-section>
-  <app-section [src]="'../assets/images/modelS/desktop.avif'"></app-section>
-  <app-section [src]="'../assets/images/modelY/desktop.avif'"></app-section>
-  <app-overlay />
+  <!-- <app-section
+    [src]="'../assets/images/modelS/desktop.avif'"
+    [title]="'Model S'"
+  ></app-section>
+  <app-section
+    [src]="'../assets/images/modelX/desktop.avif'"
+    [title]="'Model X'"
+  ></app-section>
+  <app-section
+    [src]="'../assets/images/modelY/desktop.avif'"
+    [title]="'Model Y'"
+  ></app-section>
+  <app-section
+    [title]="'Solar and Powerwall'"
+    [src]="'../assets/images/Desktop_SolarPanels.avif'"
+  ></app-section> -->
+
+  <div style="height: 4000px"></div>
+  <app-section
+    [src]="'../assets/images/model3/desktop.avif'"
+    [title]="'Model 3'"
+  ></app-section>
+  <div style="height: 4000px"></div>
 </div>
 
 <router-outlet></router-outlet>
