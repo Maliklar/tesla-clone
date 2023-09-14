@@ -14,10 +14,39 @@
     </a>
   </h1>
   <nav>
-    <button tabindex="0" class="navButton">Vehicles</button>
-    <button tabindex="0" class="navButton">Energy</button>
-    <button tabindex="0" class="navButton">Charging</button>
-    <button tabindex="0" class="navButton">Discover</button>
+    <button
+      tabindex="0"
+      [attr.data-active]="menuItems[0].active"
+      (mouseover)="hoverHandler(menuType.vehicles)"
+      class="navButton"
+    >
+      Vehicles
+    </button>
+    <button
+      tabindex="0"
+      [attr.data-active]="menuItems[1].active"
+      (mouseover)="hoverHandler(menuType.energy)"
+      class="navButton"
+    >
+      Energy
+    </button>
+    <button
+      tabindex="0"
+      [attr.data-active]="menuItems[2].active"
+      ng
+      (mouseover)="hoverHandler(menuType.charging)"
+      class="navButton"
+    >
+      Charging
+    </button>
+    <button
+      tabindex="0"
+      [attr.data-active]="menuItems[3].active"
+      (mouseover)="hoverHandler(menuType.discover)"
+      class="navButton"
+    >
+      Discover
+    </button>
   </nav>
   <div class="end">
     <button tabindex="0" title="FAQ">

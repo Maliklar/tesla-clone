@@ -43,6 +43,12 @@ button {
   margin: 0;
   border: none;
   background-color: transparent;
+  border-radius: 8px;
+  transition: all 0.5s;
+
+  &[data-active="true"] {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
 }
 .navButton {
   font-weight: bold;
