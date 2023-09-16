@@ -42,4 +42,8 @@ export class NavigationComponent {
 
     console.log(this.menuItems);
   }
+
+  getActiveTitle() {
+    return this.menuItems.find((i) => i.active === true);
+  }
 }
